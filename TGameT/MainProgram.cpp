@@ -37,6 +37,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		
 		PlayerAll();   //プレイヤの処理をまとめた関数
 
+	if (CheckHitKey(KEY_INPUT_ESCAPE) == 1) {
+		 return 0;
+		}
+
 		ScreenFlip();              //画面の更新
 	}
 	WaitKey();  //キー入力待ち
