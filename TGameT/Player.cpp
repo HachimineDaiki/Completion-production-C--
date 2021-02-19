@@ -9,9 +9,7 @@
 
 void PlayerDisp() {
 
-
 	DrawGraph(player.px,player.py , Pic.Player[player.PlayerNum], TRUE);  //プレイヤーを描画する
-
 
 }
 
@@ -34,6 +32,4 @@ void PlayerMove() {
 void PlayerAll() {
 	PlayerMove();  //プレイヤーの動き
 	PlayerDisp();  //プレイヤーの描画
-	
-
 }
