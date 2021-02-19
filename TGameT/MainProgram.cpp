@@ -1,9 +1,12 @@
 #include"DxLib.h"
 #include"LoadPicture.h"
+#include"Player.h"
+#include"Control.h"
 
 
 //構造体の宣言
-//image Pic;
+keyInfo g_key;   //キーに関する構造体の宣言
+Player player;   //プレイヤーに関する構造体の宣言
 
 
 // プログラムは WinMain から始まります
@@ -23,11 +26,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 		ClearDrawScreen();         //画面のクリア
 
-
+		KeyControl();  //キーに関する関数
+		PlayerAll();   //プレイヤの処理をまとめた関数
 		DrawGraph(0, 0, Pic.BackGround, TRUE);
 
-
-		DrawGraph(100, 100, Pic.Player[0], TRUE);
 
 		ScreenFlip();              //画面の更新
 	}
