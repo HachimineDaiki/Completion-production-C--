@@ -3,12 +3,17 @@
 #include"Player.h"
 #include"Control.h"
 #include"BackScrool.h"
-
+#include"Enemy.h"
+#include"FPS.h"
 //構造体の宣言
 keyInfo g_key;   //キーに関する構造体の宣言
 Player player;   //プレイヤーに関する構造体の宣言
-BackScrool backScroll;//バックスクロールクラス
 
+BackScrool backScroll;//バックスクロールクラス
+Enemy enemy;
+Fps fps;
+
+int g_count = 0 ;
 int nResult = ChangeWindowMode(TRUE);
 
 // プログラムは WinMain から始まります
@@ -33,8 +38,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		ClearDrawScreen();         //画面のクリア
 		KeyControl();  //キーに関する関数
 
-		backScroll.BackMove(); //画面スクロール
 		
+		backScroll.BackMove(); //画面スクロール
+		enemy.EnemyAll(); //敵処理関数(封印中)
+
+		fps.FpsAll();
 		PlayerAll();   //プレイヤの処理をまとめた関数
 
 	if (CheckHitKey(KEY_INPUT_ESCAPE) == 1) {

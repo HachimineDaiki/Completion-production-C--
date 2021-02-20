@@ -1,5 +1,7 @@
 #pragma once
 
+/*縦スクロールクラス*/
+
 class BackScrool {
 public:
 	//BackScrool();

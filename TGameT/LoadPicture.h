@@ -11,6 +11,7 @@ struct image {
 
 	int Player[6];
 
+	int Enemy; //Enemy•Ï”
 
 };
 

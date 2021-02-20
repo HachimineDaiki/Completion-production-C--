@@ -153,6 +153,8 @@
   <ItemGroup>
     <ClCompile Include="BackScrool.cpp" />
     <ClCompile Include="Control.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="FPS.cpp" />
     <ClCompile Include="LoadPicture.cpp" />
     <ClCompile Include="MainProgram.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -160,6 +162,8 @@
   <ItemGroup>
     <ClInclude Include="BackScrool.h" />
     <ClInclude Include="Control.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="FPS.h" />
     <ClInclude Include="LoadPicture.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>
