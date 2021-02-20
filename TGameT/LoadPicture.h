@@ -11,6 +11,8 @@ struct image {
 
 	int Player[6];
 
+	int playerBullet;
+
 
 };
 
