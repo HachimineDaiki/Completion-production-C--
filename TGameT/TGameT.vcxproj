@@ -157,14 +157,17 @@
     <ClCompile Include="FPS.cpp" />
     <ClCompile Include="LoadPicture.cpp" />
     <ClCompile Include="MainProgram.cpp" />
+    <ClCompile Include="peCnt.cpp" />
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BackScrool.h" />
     <ClInclude Include="Control.h" />
+    <ClInclude Include="define.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="FPS.h" />
     <ClInclude Include="LoadPicture.h" />
+    <ClInclude Include="peCont.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

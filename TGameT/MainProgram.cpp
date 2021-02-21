@@ -5,6 +5,10 @@
 #include"BackScrool.h"
 #include"Enemy.h"
 #include"FPS.h"
+#include"peCont.h"
+#include"define.h"
+
+
 //構造体の宣言
 keyInfo g_key;   //キーに関する構造体の宣言
 Player player;   //プレイヤーに関する構造体の宣言
@@ -12,8 +16,9 @@ Player player;   //プレイヤーに関する構造体の宣言
 BackScrool backScroll;//バックスクロールクラス
 Enemy enemy;
 Fps fps;
+peCont cnt;
 
-int g_count = 0 ;
+int g_count = 0;
 int nResult = ChangeWindowMode(TRUE);
 
 // プログラムは WinMain から始まります
@@ -32,13 +37,14 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	
 
-	while (ProcessMessage() == 0) {
+	while (ScreenFlip()==0&&ProcessMessage()==0 && ClearDrawScreen()==0) {
 
 		DrawFormatString(0, 0, GetColor(255, 255, 255), "ChangeWindowMode() = [%d]", nResult); //ChangeWindowModeがFALSEかTRUEか。
-		ClearDrawScreen();         //画面のクリア
+
 		KeyControl();  //キーに関する関数
 
-		
+		cnt.All();
+
 		backScroll.BackMove(); //画面スクロール
 		enemy.EnemyAll(); //敵処理関数(封印中)
 
@@ -49,7 +55,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		 return 0;
 		}
 
-		ScreenFlip();              //画面の更新
 	}
 	WaitKey();  //キー入力待ち
 
