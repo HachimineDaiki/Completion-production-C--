@@ -1,28 +1,49 @@
 #pragma once
 #include"DxLib.h"
 
-#define PLAYER_MAX_SHOT1 11
-#define PLAYER_MAX_SHOT2 15
+class PLAYER {
 
-struct Player{
-
-	int px=500;  //プレイヤーのx座標  ///数字は仮
-	int py=900;  //プレイヤーのy座標
-	int pw = 50;  //自機の幅
-	int ph = 50;  //自機の高さ
-
-	int pbx[12];
-	int pby[12];
-	int bflag[12];
-
-	int PlayerNum=0;   //プレイヤーの画像を変えるための変数
-
-}; extern Player player;
-
-typedef struct {
+	//x座標,y座標
 	double x, y;
-	int flag;
-} SHOT_t; SHOT_t PlayerShots[PLAYER_MAX_SHOT1][PLAYER_MAX_SHOT2];
+
+	//画像幅
+	int width, height;
+
+	//画像を操作する変数
+	int imagenum;
+
+	//移動係数
+	float move;
+	
+
+
+
+private:
+	void Move();
+	void Draw();
+	void Anime();
+public:
+	PLAYER();
+	void All();
+
+};
+
+
+//struct Player{
+//
+//	float px=500;  //プレイヤーのx座標  ///数字は仮
+//	float py=900;  //プレイヤーのy座標
+//	int pw = 50;  //自機の幅
+//	int ph = 50;  //自機の高さ
+//
+//
+//	int PlayerNum=0;   //プレイヤーの画像を変えるための変数
+//
+//}; extern Player player;
+
+
+
+
 
 
 

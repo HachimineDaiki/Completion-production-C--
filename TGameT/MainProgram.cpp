@@ -6,12 +6,14 @@
 #include"Enemy.h"
 #include"FPS.h"
 #include"peCont.h"
+#include"Shot.h"
 #include"define.h"
 
 
 //構造体の宣言
 keyInfo g_key;   //キーに関する構造体の宣言
-Player player;   //プレイヤーに関する構造体の宣言
+PLAYER player;   //プレイヤーに関する構造体の宣言
+
 
 BackScrool backScroll;//バックスクロールクラス
 Enemy enemy;
@@ -49,7 +51,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		enemy.EnemyAll(); //敵処理関数(封印中)
 
 		fps.FpsAll();
-		PlayerAll();   //プレイヤの処理をまとめた関数
+		player.All();   //プレイヤの処理をまとめた関数
 
 	if (CheckHitKey(KEY_INPUT_ESCAPE) == 1) {
 		 return 0;

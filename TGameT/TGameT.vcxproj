@@ -159,6 +159,7 @@
     <ClCompile Include="MainProgram.cpp" />
     <ClCompile Include="peCnt.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Shot.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BackScrool.h" />
@@ -169,6 +170,7 @@
     <ClInclude Include="LoadPicture.h" />
     <ClInclude Include="peCont.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Shot.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
