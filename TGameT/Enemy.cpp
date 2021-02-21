@@ -8,7 +8,7 @@ Enemy::Enemy() {
 
 	DrawGraph(Enx, Eny, Pic.Enemy, TRUE);
 
-	Enx=50, Eny=-50, Enw=27, Enh=25;//座標、幅・高さ
+	Enx=50, Eny=-60, Enw=27, Enh=25;//座標、幅・高さ
 
 	in_time = 180;
 	stop_time = 300;
@@ -39,6 +39,10 @@ void Enemy::EnemyMove() {
 	}
 }
 
+void Enemy::Shot() {
+
+
+}
 bool Enemy::EnemyAll(){
 	EnemyDisp();
 	EnemyMove();
