@@ -13,13 +13,17 @@ PLAYER::PLAYER() {
 	//移動係数
 	move = 1.0f;
 
+	
+
 	//初期位置
 	x = 100;
 	y = 400;
 
-
 	//画像を操作する変数
 	imagenum = 0;
+
+	//life
+	life = true;
 
 }
 
@@ -31,16 +35,16 @@ void PLAYER::Draw() {
 }
 
 void PLAYER::Move() {
-	if (g_key.nowKey & PAD_INPUT_UP) {  //十字キーの上を押すと上に進む
+	if (g_key.nowKey& PAD_INPUT_UP&& PLAYER::y>0) {  //十字キーの上を押すと上に進む
 		PLAYER::y-=5.0f;
 	}
-	if (g_key.nowKey & PAD_INPUT_DOWN) {  //十字キーの下を押すと下に進む
+	if (g_key.nowKey & PAD_INPUT_DOWN&& PLAYER::y < 900) {  //十字キーの下を押すと下に進む
 		PLAYER::y+=5.0f;
 	}
-	if (g_key.nowKey & PAD_INPUT_RIGHT) {  //十字キーの右を押すと右に進む
+	if (g_key.nowKey & PAD_INPUT_RIGHT&& PLAYER::x < 800) {  //十字キーの右を押すと右に進む
 		PLAYER::x+=5.0f;
 	}
-	if (g_key.nowKey & PAD_INPUT_LEFT) {  //十字キーの左を押すと左に進む
+	if (g_key.nowKey & PAD_INPUT_LEFT && PLAYER::x > 0) {  //十字キーの左を押すと左に進む
 		PLAYER::x-=5.0f;
 	}
 	//BulletMove();

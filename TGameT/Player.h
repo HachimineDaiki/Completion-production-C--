@@ -14,9 +14,10 @@ class PLAYER {
 
 	//移動係数
 	float move;
+
+	//移動
+	bool life;
 	
-
-
 
 private:
 	void Move();
@@ -48,10 +49,10 @@ public:
 
 
 
-void PlayerDisp();  //プレイヤーの描画
-void PlayerMove();   //プレイヤーの動き
-void PlayerShot();   //プレイヤーの射撃の処理
-void PlayerBulletMove();  //自機の弾の動き
-void PlayerAnime();   //プレイヤーのアニメーション
-
-void PlayerAll();   //プレイヤに関する情報をすべてまとめる
+//void PlayerDisp();  //プレイヤーの描画
+//void PlayerMove();   //プレイヤーの動き
+//void PlayerShot();   //プレイヤーの射撃の処理
+//void PlayerBulletMove();  //自機の弾の動き
+//void PlayerAnime();   //プレイヤーのアニメーション
+//
+//void PlayerAll();   //プレイヤに関する情報をすべてまとめる
